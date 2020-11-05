@@ -34,6 +34,6 @@ class Itemset extends Array {
     }
 
     toString() {
-        return '{' + this.join(', ') + '} (support: ' + this.Support + '%)';
+        return '{' + this.join(', ') + '}  (support: ' + this.Support + '%)';
     }
 }

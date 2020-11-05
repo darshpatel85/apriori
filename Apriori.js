@@ -30,7 +30,7 @@ function SetControlBehaviors() {
         $('#DBTextBox').val(_db.join('\n'));
     });
     $('ClearDBButton').click(function(){
-        ClearResult();
+        $('#DBTextBox').val('');
     })
     // Set apriori-button behavior
     $('#AprioriButton').click(function () {
