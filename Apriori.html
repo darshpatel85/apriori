@@ -1,0 +1,79 @@
+<html>
+<head>
+    <title>Apriori Algorithm Demo</title>
+    <script type="text/javascript" src="jquery/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="Itemset.js"></script>
+    <script type="text/javascript" src="ItemsetCollection.js"></script>
+    <script type="text/javascript" src="AssociationRule.js"></script>
+    <script type="text/javascript" src="Bit.js"></script>
+    <script type="text/javascript" src="AprioriMining.js"></script>
+    <script type="text/javascript" src="Apriori.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+</head>
+<body class="container bg-dark m-5 p-5">
+
+    <div id="AprioriContainer" >
+    <p class="h1" style="color: white" >Apriori Algorithm</p>
+        <table id="AprioriTable" class="table table-striped table-dark" cellpadding="0" cellspacing="0" border="0">
+            <tr>
+                <td>Enter Items:</td>
+                <td colspan="3"><input type="text" id="ItemsTextBox" value=""  class="form-control" /></td>
+            </tr>
+            <tr>
+                <td>Transactions:
+                            </td>
+
+                <td colspan="3">
+                    <textarea id="DBTextBox" value="" cols="73" rows="10"  class="form-control"></textarea>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td colspan="3">
+                   
+
+                    <button id="ClearDBButton" class="btn btn-primary">Clear DB</button>&nbsp;&nbsp;
+                    
+                    <button id="DefaultDBButton" class="btn btn-primary">Default DB</button>&nbsp;&nbsp;
+                </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="1">
+                    Support (%):   
+                    <input type="number" id="SupportThresholdTextBox" value="40.00" style="width:100px" class="form-control" />
+                  </td>
+                  <td colspan="1">
+                    Confidence (%):
+                    <input type="number" id="ConfidenceThresholdTextBox" style="width:100px" value="70.00"  class="form-control" />
+                    
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="3">
+                <button id="AprioriButton" class="btn btn-success">Answer</button>
+                </td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td colspan="3">
+                    <textarea id="ResultTextBox" cols="73" rows="10" class="form-control" readonly="readonly"></textarea>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
+
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+ 
+</body>
+</html>
