@@ -29,7 +29,7 @@ function SetControlBehaviors() {
 
         $('#DBTextBox').val(_db.join('\n'));
     });
-    $('ClearDBButton').click(function(){
+    $('#ClearDBButton').click(function(){
         $('#DBTextBox').val('');
     })
     // Set apriori-button behavior
@@ -56,7 +56,6 @@ function SetControlBehaviors() {
         let L = AprioriMining.doApriori(db, supportThreshold);
 
         ClearResult();
-        AddResultLine(L.length + ' Large Itemsets (by Apriori):');
         AddResultLine(L.join('\n'));
         AddResultLine('');
 
