@@ -27,7 +27,7 @@ class AprioriMining {
                     L.push(itemset);
                 }
             }
-
+            L.push('\n');
             // Set Ci for next iteration (find supersets of Li)
             Ci.clear();
             let subsets = Bit.findSubsets(Li.getUniqueItems(), k); // Get k-item subsets
@@ -38,31 +38,4 @@ class AprioriMining {
         return L;
     }
 
-    static mine(db, L, confidenceThreshold) {
-        let allRules = [];
-    
-        for (var i in L) {
-            let itemset = L[i];
-            let subsets = Bit.findSubsets(itemset, 0); // Get all subsets
-
-            for (var j in subsets) {
-                let subset = subsets[j];
-                let confidence = (db.findSupport(itemset) / db.findSupport(subset)) * 100.0;
-
-                if (confidence >= confidenceThreshold) {
-                    let rule = new AssociationRule();
-                    subset.forEach(i => rule.X.push(i));
-                    itemset.removeItemset(subset).forEach(i => rule.Y.push(i));
-                    rule.Support = db.findSupport(itemset);
-                    rule.Confidence = confidence;
-
-                    if (rule.X.length > 0 && rule.Y.length > 0) {
-                        allRules.push(rule);
-                    }
-                }
-            }
-        }
-
-        return allRules;
-    }
 }
